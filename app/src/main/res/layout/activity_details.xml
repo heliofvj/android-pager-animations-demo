@@ -4,13 +4,18 @@
     android:background="#666"
     android:orientation="vertical">
 
-    <com.ifttt.sparklemotion.SparkleViewPagerLayout
-        android:id="@+id/view_pager_layout"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="300dp">
 
         <ImageView
-            android:id="@+id/image_pager_bg"
+            android:id="@+id/image_pager_bg_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/image_pager_bg_top"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop" />
@@ -23,7 +28,7 @@
             android:paddingLeft="24dp"
             android:paddingRight="24dp" />
 
-    </com.ifttt.sparklemotion.SparkleViewPagerLayout>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/textView"

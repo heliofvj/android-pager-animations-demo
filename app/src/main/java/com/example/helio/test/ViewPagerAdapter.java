@@ -51,6 +51,8 @@ public class ViewPagerAdapter extends PagerAdapter {
                 imageView.setTransitionName(null);
             }
         }
+        pagerItemView.setTag(R.id.image_pager_bg_bottom, Data.URLS[position]);
+        pagerItemView.setTag(R.id.image_pager_bg_top, position < getCount() - 1 ? Data.URLS[position + 1] : null);
         return pagerItemView;
     }
 
