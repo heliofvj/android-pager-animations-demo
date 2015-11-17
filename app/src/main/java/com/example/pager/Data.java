@@ -1,4 +1,4 @@
-package com.example.helio.test;
+package com.example.pager;
 
 final class Data {
     static final String BASE = "http://i.imgur.com/";

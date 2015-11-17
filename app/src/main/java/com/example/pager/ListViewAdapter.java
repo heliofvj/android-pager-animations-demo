@@ -1,4 +1,4 @@
-package com.example.helio.test;
+package com.example.pager;
 
 import android.content.Context;
 import android.view.LayoutInflater;

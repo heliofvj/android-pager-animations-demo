@@ -1,4 +1,4 @@
-package com.example.helio.test;
+package com.example.pager;
 
 import android.content.Intent;
 import android.os.Bundle;

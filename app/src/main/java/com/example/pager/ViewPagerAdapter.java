@@ -1,4 +1,4 @@
-package com.example.helio.test;
+package com.example.pager;
 
 import android.app.Activity;
 import android.content.Context;
