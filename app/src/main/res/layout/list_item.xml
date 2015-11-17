@@ -11,7 +11,7 @@
         android:layout_height="160dp"
         android:layout_gravity="center_vertical"
         android:scaleType="centerCrop"
-        android:transitionName="@string/transition_album_cover" />
+        android:transitionName="@string/transition_picture" />
 
     <TextView
         android:id="@+id/textView"

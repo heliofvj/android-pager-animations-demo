@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,10 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void startDetailsWithCrazeAnimation(ViewGroup itemView, int position) {
         Intent intent = new Intent(this, DetailsActivity.class).putExtra(DetailsActivity.EXTRA_URL_INDEX, position);
-        String transitionName = getString(R.string.transition_album_cover);
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this,
-                itemView.getChildAt(0),   // The view which starts the transition
-                transitionName    // The transitionName of the view we’re transitioning to
+                new Pair<View, String>(itemView.getChildAt(0), getString(R.string.transition_picture)),
+                new Pair<View, String>(itemView.getChildAt(1), getString(R.string.transition_label))
         );
         ActivityCompat.startActivity(this, intent, options.toBundle());
     }
