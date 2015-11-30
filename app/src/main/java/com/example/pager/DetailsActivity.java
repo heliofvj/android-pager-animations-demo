@@ -66,7 +66,7 @@ public class DetailsActivity extends AppCompatActivity implements ViewPager.Page
         imageView.setTranslationX(translation * -position);
 
         ViewPagerAdapter.PageInfo pageInfo = ((ViewPagerAdapter)viewPager.getAdapter()).getPageInfoForPageView(page);
-        // if (position >= -1 && position <= 0 && leftPageBgUrl != null && rightPageBgUrl != null) { para pager em ordem reversa
+        // if (position >= -1 && position <= 0 && leftPageBgUrl != null && rightPageBgUrl != null) { for pagers in reverse order
         if (position >= -0.90 && position <= 0.10 && pageInfo.pageBgUrl != null && pageInfo.rightPageBgUrl != null) {
             if (!pagerBgIsLoadedWith(pageInfo.rightPageBgUrl, pageInfo.pageBgUrl)) {
                 loadPagerBgWithUrl(pageInfo.rightPageBgUrl, pageInfo.pageBgUrl);

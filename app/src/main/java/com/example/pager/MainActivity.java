@@ -28,16 +28,16 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startDetailsWithCrazeAnimation((ViewGroup) view, position);
+                startDetailsWithSharedElementTransition((ViewGroup) view, position);
             }
         });
     }
 
-    private void startDetailsWithCrazeAnimation(ViewGroup itemView, int position) {
+    private void startDetailsWithSharedElementTransition(ViewGroup itemView, int position) {
         Intent intent = new Intent(this, DetailsActivity.class).putExtra(DetailsActivity.EXTRA_URL_INDEX, position);
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this,
-                new Pair<View, String>(itemView.getChildAt(0), getString(R.string.transition_picture)),
-                new Pair<View, String>(itemView.getChildAt(1), getString(R.string.transition_label))
+                new Pair<>(itemView.getChildAt(0), getString(R.string.transition_picture)),
+                new Pair<>(itemView.getChildAt(1), getString(R.string.transition_label))
         );
         ActivityCompat.startActivity(this, intent, options.toBundle());
     }
